@@ -127,10 +127,6 @@ Data 2
 Test data:
 § Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
 § Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
-Hints:
-§ To calculate average of 3 values, add them all together and divide by 3
-§ To check if number A is at least double number B, check for A >= 2 * B.
-Apply this to the team's average scores
 */
 // Test data 1
 const calcAverage = (a, b, c) => (a + b + c) / 3;
