@@ -245,7 +245,7 @@ Hint: Remember that an array needs a value in each position, and that value can
 actually be the returned value of a function! So you can just call a function as array
 values (so don't store the tip values in separate variables first, but right in the new
 array) */
-
+/*
 //const calcTip = (bill) => bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.20;
 function calcTip(bill) {
     if (bill <= 300 && bill >= 50) {
@@ -306,3 +306,103 @@ console.log(tassio[interestedIn]);
 
 console.log(`${tassio.firstName} has ${tassio.friends.length} friends, and his best friend is called
 ${tassio.friends[1]}`);
+*/
+/*
+const tassio = {
+    firstName: 'Tassio',
+    lastName: 'Santos',
+    birthYear: 1991,
+    job: `Developer`,
+    friends: ['Arthur', 'Timotio', 'Carlos'],
+    hasDriversLicense: true,
+
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthYear;
+    // }
+
+    // calcAge: function(){
+    //     console.log(this);
+    //     return 2037 - this.birthYear;
+    // }
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    // challengeCourse: function (hasDriversLicense) {
+    //     if (hasDriversLicense === true) {
+    //         hasDriversLicense = 'a';
+    //         this.challenge = console.log(`${this.firstName} ${this.lastName} is a ${this.calcAge()} ${this.job}, and he
+    //     has ${hasDriversLicense} driver's license.`)
+    //     } else {
+    //         hasDriversLicense = 'no'
+    //         this.challenge = console.log(`${this.firstName} ${this.lastName} is a ${this.calcAge()} ${this.job}, and he
+    //     has ${hasDriversLicense} driver's license.`)
+    //     }
+    //     return this.challenge;
+    // },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()} years old ${this.job}, and he has
+        ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+    }
+};
+
+// console.log(tassio.calcAge()); // using "this."
+// console.log(tassio.calcAge(1991)); // declaring a variable for calcAge
+// console.log(tassio['calcAge'](1991)); // another way to declare a variable for calcAge
+console.log(tassio.calcAge());
+console.log(tassio.age);
+
+
+//Challenge
+// "Tassio Santos is a 46 years old Developer, and he has a drivers license."
+// const firstChallenge = tassio.challengeCourse(true);
+console.log(tassio.getSummary());
+*/
+
+/*
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to
+implement the calculations! Remember: BMI = mass / height ** 2 = mass
+/ (height * height) (mass in kg and height in meter)
+Your tasks:
+1. For each of them, create an object with properties for their full name, mass, and
+height (Mark Miller and John Smith)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same
+method on both objects). Store the BMI value to a property, and also return it
+from the method
+3. Log to the console who has the higher BMI, together with the full name and the
+respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+
+Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m
+tall.
+*/
+
+const mark = {
+    firstName: 'Mark',
+    lastName: 'Miller',
+    mass: 78,
+    height: 2.00,
+
+    calcBMI: function () {
+        let markBMI;
+        return markBMI = this.mass / this.height ** 2;
+    }
+
+}
+
+const john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    mass: 92,
+    height: 1.95,
+
+    calcBMI2: function () {
+        let johnBMI;
+        return johnBMI = this.mass / this.height ** 2;
+    }
+
+}
+
+console.log(`${mark.firstName} ${mark.lastName} BMI (${mark.calcBMI().toFixed(1)}) is ${mark.calcBMI() >
+    john.calcBMI2() ? 'higher' : 'lower'} than ${john.firstName} ${john.lastName} (${john.calcBMI2().toFixed(1)})`);
