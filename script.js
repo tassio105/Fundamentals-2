@@ -377,7 +377,7 @@ respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
 Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m
 tall.
 */
-
+/*
 const mark = {
     firstName: 'Mark',
     lastName: 'Miller',
@@ -406,3 +406,198 @@ const john = {
 
 console.log(`${mark.firstName} ${mark.lastName} BMI (${mark.calcBMI().toFixed(1)}) is ${mark.calcBMI() >
     john.calcBMI2() ? 'higher' : 'lower'} than ${john.firstName} ${john.lastName} (${john.calcBMI2().toFixed(1)})`);
+
+*/
+
+// console.log(`Lifting weights repetition 1`)
+// console.log(`Lifting weights repetition 2`)
+// console.log(`Lifting weights repetition 3`)
+// console.log(`Lifting weights repetition 4`)
+// console.log(`Lifting weights repetition 5`)
+// console.log(`Lifting weights repetition 6`)
+// console.log(`Lifting weights repetition 7`)
+// console.log(`Lifting weights repetition 8`)
+// console.log(`Lifting weights repetition 9`)
+// console.log(`Lifting weights repetition 10`)
+/*
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 20; rep++) {
+    console.log(`Lifting weights repetition ${rep} 💪`); // windows key + .  to create a emoji
+}
+*/
+/*
+const tassioArrays = [
+    'Tassio',
+    'Santos',
+    2037 - 1991,
+    'developer',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+const types = [];
+
+// "i" is generally used for loops
+// tassioArrays.length was used to get the whole array no matter if something changed.
+for (let i = 0; i < tassioArrays.length; i++) {
+    console.log(tassioArrays[i], typeof tassioArrays[i]);
+
+    //filling types array
+    // types[i] = typeof tassioArrays[i];
+
+    // other form of adding elements to an array
+    types.push(typeof tassioArrays[i]);
+}
+
+console.log(types);
+// Loop through arrays
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2020 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+console.log('---- ONLY STRINGS ----');
+for (let i = 0; i < tassioArrays.length; i++) {
+    if (typeof tassioArrays[i] !== 'string') continue;
+    console.log(tassioArrays[i], typeof tassioArrays[i]);
+}
+
+
+console.log('---- BREAK WITH NUMBER ----');
+for (let i = 0; i < tassioArrays.length; i++) {
+    if (typeof tassioArrays[i] === 'number') break;
+    console.log(tassioArrays[i], typeof tassioArrays[i]);
+}
+*/
+/*
+// Loop array BACKWORDS
+const tassioArrays = [
+    'Tassio',
+    'Santos',
+    2037 - 1991,
+    'developer',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+for (let i = tassioArrays.length - 1; i >= 0; i--) {
+    console.log(i, tassioArrays[i]);
+}
+
+// LOOP inside of another LOOP
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`---- Starting exercise ${exercise} ----`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Lifting weight repetition ${rep} 💪`)
+    }
+}
+*/
+/*
+// While loop
+
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weight repetition ${rep} 💪`);
+}
+
+// while loop and for loop are very simmilar
+let rep = 1;
+while (rep <= 10) {
+    console.log(`Lifting weight repetition ${rep} 💪`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log(`You hit a ${dice} Loop ended...`);
+}
+*/
+
+// CHALLENGE 
+/*
+Let's improve Steven's tip calculator even more, this time using loops!
+Your tasks:
+1. Create an array 'bills' containing all 10 test bill values
+2. Create empty arrays for the tips and the totals ('tips' and 'totals')
+3. Use the 'calcTip' function we wrote before (no need to repeat) to calculate
+tips and total values (bill + tip) for every bill value in the bills array. Use a for
+loop to perform the 10 calculations!
+Test data: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+Hints: Call ‘calcTip ‘in the loop and use the push method to add values to the
+tips and totals arrays �
+Bonus:
+4. Bonus: Write a function 'calcAverage' which takes an array called 'arr' as
+an argument. This function calculates the average of all numbers in the given
+array. This is a difficult challenge (we haven't done this before)! Here is how to
+solve it:
+4.1. First, you will need to add up all values in the array. To do the addition,
+start by creating a variable 'sum' that starts at 0. Then loop over the
+array using a for loop. In each iteration, add the current value to the
+'sum' variable. This way, by the end of the loop, you have all values
+added together
+4.2. To calculate the average, divide the sum you calculated before by the
+length of the array (because that's the number of elements)
+4.3. Call the function with the 'totals' array
+*/
+
+/*
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const totals = [];
+const tips = [];
+
+//const calcTip = function () {
+
+for (let i = 0; i < bills.length; i++) {
+    if (bills[i] >= 50 && bills[i] <= 300) {
+        tips.push(bills[i] * 0.15);
+        console.log(`Tips is equal ${tips[i]}`);
+    } else {
+        tips.push(bills[i] * 0.20);
+        console.log(`Tips is equal ${tips[i]}`);
+    }
+}
+//return tips;
+//}
+for (let i = 0; i < tips.length; i++) {
+    totals.push(bills[i] + tips[i]);
+    console.log(`Total bill for ${bills[i]} is ${totals[i]}`);
+}
+*/
+
+const calcTip = function (bill) {
+    return bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.20;
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+}
+
+console.log(bills, tips, totals);
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        // sum = sum + arr[i];
+        sum += arr[i];
+    }
+
+    return sum / arr.length;
+}
+console.log(calcAverage([2, 3, 6]));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
