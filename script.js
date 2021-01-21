@@ -549,37 +549,14 @@ length of the array (because that's the number of elements)
 4.3. Call the function with the 'totals' array
 */
 
-/*
+
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const totals = [];
 const tips = [];
-
-//const calcTip = function () {
-
-for (let i = 0; i < bills.length; i++) {
-    if (bills[i] >= 50 && bills[i] <= 300) {
-        tips.push(bills[i] * 0.15);
-        console.log(`Tips is equal ${tips[i]}`);
-    } else {
-        tips.push(bills[i] * 0.20);
-        console.log(`Tips is equal ${tips[i]}`);
-    }
-}
-//return tips;
-//}
-for (let i = 0; i < tips.length; i++) {
-    totals.push(bills[i] + tips[i]);
-    console.log(`Total bill for ${bills[i]} is ${totals[i]}`);
-}
-*/
 
 const calcTip = function (bill) {
-    return bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.20;
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
-
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const tips = [];
-const totals = [];
 
 for (let i = 0; i < bills.length; i++) {
     const tip = calcTip(bills[i]);
@@ -588,6 +565,8 @@ for (let i = 0; i < bills.length; i++) {
 }
 
 console.log(bills, tips, totals);
+
+
 
 const calcAverage = function (arr) {
     let sum = 0;
